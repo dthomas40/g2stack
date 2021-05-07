@@ -80,18 +80,16 @@ class CreateBook extends Component {
                   />
                 </div>
 
-                {/* <div className='form-group'>
+                <div className='form-group'>
                   <input
-                    // hidden
                     type='text'
                     placeholder='Post ID'
                     name='isbn'
                     className='form-control'
                     value={this.state.isbn}
-                    // value= '0000000000'
                     onChange={this.onChange}
                   />
-                </div> */}
+                </div>
 
                 <div className='form-group'>
                   <input
