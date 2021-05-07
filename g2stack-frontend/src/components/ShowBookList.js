@@ -3,6 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BookCard from './BookCard';
+import Navbar from "./Navbar"
 
 class ShowBookList extends Component {
   constructor(props) {
@@ -58,6 +59,9 @@ class ShowBookList extends Component {
             </div>
 
           </div>
+
+          <Navbar />
+          <br />
 
           <div className="list">
                 {bookList}
