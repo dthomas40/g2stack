@@ -10,3 +10,7 @@
     background-color: #343a40;
     border: none;
 }
+
+.shrink {
+    width: fit-content;
+}

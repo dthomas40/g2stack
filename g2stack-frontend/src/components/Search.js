@@ -13,15 +13,13 @@ class Search extends  Component {
 	}
 	render() {
 		return (
-			<div className="navbar navbar-dark bg-dark navbar-expand-lg">
-				<label className="search-label" htmlFor="search-input">
-					<input
-						type="text"
-						value=""
-						id="search-input"
-						placeholder="Search..."
-					/>
-				</label>				
+			<div className="shrink navbar navbar-dark bg-dark">
+				<input
+					type="text"
+					value=""
+					id="search-input"
+					placeholder="Search..."
+				/>
 			</div>
 			)
 	}
