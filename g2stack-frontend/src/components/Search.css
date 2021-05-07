@@ -1,0 +1,12 @@
+.search-label {
+    position: relative;
+}
+.container input {
+	width: 180%;
+	padding: 1%;
+	font-size: 15px;
+	color: rgb(204, 0, 255);
+	outline: none;
+    background-color: #343a40;
+    border: none;
+}
