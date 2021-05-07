@@ -57,6 +57,13 @@
   color: rgb(0, 0, 0);
 }
 
+.About {
+  background-color: #5cff9a;
+  min-height: 100vh;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
 
 /* BookList Styles */
 .list {
