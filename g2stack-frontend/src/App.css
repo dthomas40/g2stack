@@ -32,33 +32,37 @@
   }
 }
 
+:root {
+  --main-bg-color: #5cff9a;
+}
+
 .CreateBook {
-  background-color: #5cff9a;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   color: rgb(0, 0, 0);
 }
 
 .ShowBookDetails {
-  background-color: #5cff9a;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   color: rgb(0, 0, 0);
   overflow: scroll;
 }
 
 .UpdateBookInfo {
-  background-color: #5cff9a;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   color: rgb(0, 0, 0);
 }
 
 .ShowBookList {
-  background-color: #5cff9a;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   color: rgb(0, 0, 0);
 }
 
 .About {
-  background-color: #5cff9a;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   color: rgb(0, 0, 0);
   overflow: hidden;
