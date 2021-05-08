@@ -64,6 +64,10 @@ class ShowBookList extends Component {
           <Navbar />
           <br />
 
+          {/* <marquee behavior="scroll">
+            Search your queries here and see the script cards update...
+          </marquee> */}
+
           <Search />
           <br />
 
