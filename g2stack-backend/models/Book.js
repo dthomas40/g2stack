@@ -5,10 +5,6 @@ const BookSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  isbn: {
-    type: String,
-    required: true
-  },
   author: {
     type: String,
     required: true
