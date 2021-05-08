@@ -16,6 +16,7 @@ class Search extends Component {
 
   handleChange(event) {
     this.setState({ value: event.target.value });
+    document.getElementById("search-input").scrollIntoView();
   }
 
   componentDidMount() {
