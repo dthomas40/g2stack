@@ -143,3 +143,12 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.logo-size {
+  max-width: 30%;
+  max-height: 30%;
+}
+
+.lead {
+  font-size: 200%;
+}

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import '../App.css';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import BookCard from './BookCard';
+import React, { Component } from "react";
+import "../App.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import BookCard from "./BookCard";
 import Navbar from "./Navbar";
 import Search from "./Search";
 
@@ -10,35 +10,32 @@ class ShowBookList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
     };
   }
 
   componentDidMount() {
     axios
-      .get('https://g2stack.herokuapp.com/api/books')
-      .then(res => {
+      .get("https://g2stack.herokuapp.com/api/books")
+      .then((res) => {
         this.setState({
-          books: res.data
-        })
+          books: res.data,
+        });
       })
-      .catch(err =>{
-        console.log('Error from ShowBookList');
-      })
-  };
-
+      .catch((err) => {
+        console.log("Error from ShowBookList");
+      });
+  }
 
   render() {
     const books = this.state.books;
     console.log("PrintBook: " + books);
     let bookList;
 
-    if(!books) {
+    if (!books) {
       bookList = "there is no book record!";
     } else {
-      bookList = books.map((book, k) =>
-        <BookCard book={book} key={k} />
-      );
+      bookList = books.map((book, k) => <BookCard book={book} key={k} />);
     }
 
     return (
@@ -47,18 +44,21 @@ class ShowBookList extends Component {
           <div className="row">
             <div className="col-md-12">
               <br />
-              <h2 className="display-4 text-center">G2 STACK</h2>
+              <h2 className="lead text-center">G2 STACK</h2>
             </div>
 
             <div className="col-md-11">
-              <Link to="/create-book" className="btn btn-outline-dark float-right">
+              {/* <img class="logo-size float-left" src="G2.png" /> */}
+              <Link
+                to="/create-book"
+                className="btn btn-outline-dark float-right"
+              >
                 + Add New Stack Post
               </Link>
               <br />
               <br />
               <hr />
             </div>
-
           </div>
 
           <Navbar />
@@ -67,12 +67,10 @@ class ShowBookList extends Component {
           <Search />
           <br />
 
-          <h1 className="display-4">Browse</h1>
+          <h1 className="lead">Browse</h1>
           <br />
 
-          <div class="list wrap">
-                {bookList}
-          </div>
+          <div class="list wrap">{bookList}</div>
         </div>
       </div>
     );
