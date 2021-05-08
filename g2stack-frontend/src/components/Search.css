@@ -14,3 +14,15 @@
 .shrink {
     width: fit-content;
 }
+
+.results {
+    background: rgb(255, 255, 255);
+}
+
+.d {
+    list-style-type: none;
+}
+
+.query {
+    color: aquamarine;
+}
