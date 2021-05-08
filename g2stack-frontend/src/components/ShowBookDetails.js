@@ -37,6 +37,14 @@ class showBookDetails extends Component {
       });
   }
 
+  clearSelection() {
+    if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+    } else if (document.selection) {
+      document.selection.empty();
+    }
+  }
+
   selectText(node) {
     node = document.getElementById(node);
 
@@ -55,6 +63,8 @@ class showBookDetails extends Component {
     }
 
     document.execCommand("copy");
+    this.clearSelection();
+    alert("The script has been copied to clipboard.");
   }
 
   render() {
@@ -84,9 +94,7 @@ class showBookDetails extends Component {
               <th scope="row">2</th>
               <td>Script</td>
               <td>
-                <p clickable class="click-me">
-                  Click here to copy script.
-                </p>
+                <p class="click-me">Click here to copy script.</p>
                 <br />
                 <div id="script-text">{book.publisher}</div>
               </td>
