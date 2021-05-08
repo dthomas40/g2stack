@@ -1,44 +1,54 @@
 .search-label {
-    position: relative;
+  position: relative;
 }
 .shrink input {
-	width: 180%;
-	padding: 1%;
-	font-size: 15px;
-	color: rgb(204, 0, 255);
-	outline: none;
-    background-color: #343a40;
-    border: none;
+  width: 180%;
+  padding: 1%;
+  font-size: 15px;
+  color: rgb(204, 0, 255);
+  outline: none;
+  background-color: #343a40;
+  border: none;
 }
 
 .shrink {
-    width: fit-content;
+  width: fit-content;
 }
 
 .qlist {
-    display: flex;
-    margin: 0px;
-    padding-bottom: 25px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr;
-    grid-gap: 2em;
-    overflow: scroll;
-    -ms-overflow-style: scrollbar;
-  }
+  display: flex;
+  margin: 0px;
+  padding-bottom: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 2em;
+  overflow: scroll;
+  -ms-overflow-style: scrollbar;
+}
 
 .results {
-    background: #5cff9a;
-    overflow-y: hidden;
+  background: #343a4000;
+  overflow-y: hidden;
+}
+
+.search-section {
+  border: 5px solid #343a4000;
+  background-color: #343a4000;
+  border-radius: 10px;
 }
 
 .qlist ::-webkit-scrollbar {
-    width: 1px;
+  width: 1px;
+}
+
+.search-bar {
+  width: 100%;
 }
 
 .search-list {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .query {
-    color: aquamarine;
+  color: aquamarine;
 }
