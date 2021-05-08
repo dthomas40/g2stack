@@ -63,7 +63,7 @@ class Search extends Component {
 					{this.state.value}
 				</div>
 			</div>
-			<div class='list results'>
+			<div class='qlist results'>
 				{ bookList.map((book, k) => {
 					return(
 						<div class="search-list"> <br />
