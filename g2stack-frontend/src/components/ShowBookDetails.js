@@ -63,11 +63,6 @@ class showBookDetails extends Component {
             <td>{ book.author }</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>ISBN</td>
-            <td>{ book.isbn }</td>
-          </tr>
-          <tr>
             <th scope="row">4</th>
             <td>Publisher</td>
             <td>{ book.publisher }</td>

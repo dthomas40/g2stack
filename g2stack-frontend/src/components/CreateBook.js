@@ -9,7 +9,6 @@ class CreateBook extends Component {
     super();
     this.state = {
       title: '',
-      isbn:'',
       author:'',
       description:'',
       published_date:'',
@@ -26,7 +25,6 @@ class CreateBook extends Component {
 
     const data = {
       title: this.state.title,
-      isbn: this.state.isbn,
       author: this.state.author,
       description: this.state.description,
       published_date: this.state.published_date,
@@ -38,7 +36,6 @@ class CreateBook extends Component {
       .then(res => {
         this.setState({
           title: '',
-          isbn:'',
           author:'',
           description:'',
           published_date:'',
@@ -76,17 +73,6 @@ class CreateBook extends Component {
                     name='title'
                     className='form-control'
                     value={this.state.title}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className='form-group'>
-                  <input
-                    type='text'
-                    placeholder='Post ID'
-                    name='isbn'
-                    className='form-control'
-                    value={this.state.isbn}
                     onChange={this.onChange}
                   />
                 </div>

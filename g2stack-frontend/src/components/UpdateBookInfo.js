@@ -8,7 +8,6 @@ class UpdateBookInfo extends Component {
     super(props);
     this.state = {
       title: '',
-      isbn: '',
       author: '',
       description: '',
       published_date: '',
@@ -24,7 +23,6 @@ class UpdateBookInfo extends Component {
         // this.setState({...this.state, book: res.data})
         this.setState({
           title: res.data.title,
-          isbn: res.data.isbn,
           author: res.data.author,
           description: res.data.description,
           published_date: res.data.published_date,
@@ -45,7 +43,6 @@ class UpdateBookInfo extends Component {
 
     const data = {
       title: this.state.title,
-      isbn: this.state.isbn,
       author: this.state.author,
       description: this.state.description,
       published_date: this.state.published_date,
@@ -95,18 +92,6 @@ class UpdateBookInfo extends Component {
                 onChange={this.onChange}
               />
             </div>
-
-            {/* <div className='form-group'>
-            <label htmlFor="isbn">ISBN</label>
-              <input
-                type='text'
-                placeholder='ISBN'
-                name='isbn'
-                className='form-control'
-                value={this.state.isbn}
-                onChange={this.onChange}
-              />
-            </div> */}
 
             <div className='form-group'>
             <label htmlFor="author">Author</label>
