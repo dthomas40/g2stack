@@ -67,7 +67,10 @@ class ShowBookList extends Component {
           <Search />
           <br />
 
-          <div className="list">
+          <h1>Browse</h1>
+          <br />
+
+          <div class="list wrap">
                 {bookList}
           </div>
         </div>

@@ -77,10 +77,15 @@
   scrollbar-width: none;
 }
 
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card-container {
   width: 250px;
-  min-height: 250px;
-  margin: 0 auto;
+  min-height: 200px;
+  margin: 0 0;
   overflow: hidden;
 
   background-color: rgb(157, 255, 206);
@@ -88,6 +93,11 @@
   border: 1px solid;
   padding: 0px;
   box-shadow: 6px 6px;
+}
+
+.query-card {
+  width: 250px;
+  min-height: 130px;
 }
 
 .desc {

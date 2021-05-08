@@ -2,7 +2,7 @@ import './Styles.css';
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
-import BookCard from './BookCard';
+import QueryCard from './QueryCard';
 
 class Search extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class Search extends Component {
       bookList = "there is no book record!";
     } else {
       bookList = qBooks.map((book, k) =>
-        <BookCard book={book} key={k} />
+        <QueryCard book={book} key={k} />
       );
     }
 

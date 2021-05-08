@@ -1,7 +1,7 @@
 .search-label {
     position: relative;
 }
-.container input {
+.shrink input {
 	width: 180%;
 	padding: 1%;
 	font-size: 15px;
