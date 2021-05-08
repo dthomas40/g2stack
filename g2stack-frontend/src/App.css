@@ -64,7 +64,6 @@
   overflow: hidden;
 }
 
-
 /* BookList Styles */
 .list {
   display: grid;
@@ -81,10 +80,14 @@
 .card-container {
   width: 250px;
   min-height: 250px;
-  border: 1px solid rgba(0,0,.125);
   margin: 0 auto;
-  border-radius: 5px;
   overflow: hidden;
+
+  background-color: rgb(157, 255, 206);
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 0px;
+  box-shadow: 6px 6px;
 }
 
 .desc {

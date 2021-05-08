@@ -3,8 +3,8 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BookCard from './BookCard';
-import Navbar from "./Navbar"
-import Search from "./Search"
+import Navbar from "./Navbar";
+import Search from "./Search";
 
 class ShowBookList extends Component {
   constructor(props) {

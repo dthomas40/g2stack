@@ -16,10 +16,10 @@
 }
 
 .results {
-    background: rgb(255, 255, 255);
+    background: #5cff9a;
 }
 
-.d {
+.search-list {
     list-style-type: none;
 }
 

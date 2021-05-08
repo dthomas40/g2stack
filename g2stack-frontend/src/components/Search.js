@@ -1,4 +1,4 @@
-import './Search.css';
+import './Styles.css';
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
@@ -66,10 +66,8 @@ class Search extends Component {
 			<div class='list results'>
 				{ bookList.map((book, k) => {
 					return(
-						<div> <br />
-							<ul class="d">
-								<li>{book}</li>
-							</ul>
+						<div class="search-list"> <br />
+							<li>{book}</li>
 						</div>
 					)
 				})}
