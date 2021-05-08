@@ -27,14 +27,19 @@
 }
 
 .results {
-  background: #343a4000;
+  background: #343a40;
   overflow-y: hidden;
+  border: 1px solid #343a40;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-color: #888;
+  border-top-width: 1px;
 }
 
 .search-section {
-  border: 5px solid #343a4000;
+  border: 2px solid #343a4000;
   background-color: #343a4000;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .qlist ::-webkit-scrollbar {

@@ -37,8 +37,33 @@ class showBookDetails extends Component {
       });
   }
 
+  selectText(node) {
+    node = document.getElementById(node);
+
+    if (document.body.createTextRange) {
+      const range = document.body.createTextRange();
+      range.moveToElementText(node);
+      range.select();
+    } else if (window.getSelection) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    } else {
+      console.warn("Could not select text in node: Unsupported browser.");
+    }
+
+    document.execCommand("copy");
+  }
+
   render() {
     const book = this.state.book;
+    const clickable = document.querySelector(".click-me");
+    if (clickable) {
+      clickable.addEventListener("click", () => this.selectText("script-text"));
+    }
+
     let BookItem = (
       <div>
         <table className="table table-hover table-dark">
@@ -59,7 +84,11 @@ class showBookDetails extends Component {
               <th scope="row">2</th>
               <td>Script</td>
               <td>
-                <code id="script-text">{book.publisher}</code>
+                <p clickable class="click-me">
+                  Click here to copy script.
+                </p>
+                <br />
+                <div id="script-text">{book.publisher}</div>
               </td>
             </tr>
           </tbody>
@@ -94,7 +123,7 @@ class showBookDetails extends Component {
                 className="btn btn-outline-danger btn-lg btn-block"
                 onClick={this.onDeleteClick.bind(this, book._id)}
               >
-                Delete Book
+                Delete Post
               </button>
               <br />
             </div>
@@ -104,14 +133,11 @@ class showBookDetails extends Component {
                 to={`/edit-book/${book._id}`}
                 className="btn btn-outline-info btn-lg btn-block"
               >
-                Edit Book
+                Edit Post
               </Link>
               <br />
             </div>
           </div>
-          {/* <br />
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">Edit Book</button>
-            <button type="button" class="btn btn-outline-danger btn-lg btn-block">Delete Book</button> */}
         </div>
       </div>
     );
