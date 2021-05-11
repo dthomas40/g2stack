@@ -1,4 +1,3 @@
-import "./Styles.css";
 import React, { Component } from "react";
 import "../App.css";
 import axios from "axios";
@@ -51,25 +50,19 @@ class Search extends Component {
 
     return (
       <div class="search-section">
-        <div className="shrink search-bar navbar navbar-dark bg-dark">
+        <div className="search-bar">
           <input
             type="text"
             value={this.state.value}
             id="search-input"
-            placeholder="Search..."
+            placeholder="What are you looking for ?"
             onChange={this.handleChange}
           />
-          <div class="query">{this.state.value}</div>
+          {/* <div class="query">{this.state.value}</div> */}
         </div>
-        <div class="qlist results">
+        <div class="results">
           {bookList.map((book, k) => {
-            return (
-              <div class="search-list">
-                {" "}
-                <br />
-                <li>{book}</li>
-              </div>
-            );
+            return <div>{book}</div>;
           })}
         </div>
       </div>

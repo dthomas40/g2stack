@@ -76,31 +76,17 @@ class showBookDetails extends Component {
 
     let BookItem = (
       <div>
-        <table className="table table-hover table-dark">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Var</th>
-              <th scope="col">Contents</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Description</td>
-              <td>{book.description}</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Script</td>
-              <td>
-                <p class="click-me">Click here to copy script.</p>
-                <br />
-                <div id="script-text">{book.publisher}</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <h1 class="lead">Description</h1>
+        <br />
+        <div class="script-detail-desc">{book.description}</div>
+        <br />
+
+        <h1 class="lead">Script Code</h1>
+        <br />
+        <div class="script-detail-script">
+          <p class="click-me">Click here to copy script.</p>
+          <div id="script-text">{book.publisher}</div>
+        </div>
       </div>
     );
 
@@ -108,23 +94,37 @@ class showBookDetails extends Component {
       <div className="ShowBookDetails">
         <div className="container">
           <div className="row">
-            <div className="col-md-10 m-auto">
-              <br /> <br />
-              <Link to="/" className="btn btn-outline-dark float-left">
-                Return
-              </Link>
-            </div>
             <br />
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">{book.title}</h1>
-              <p className="lead text-center">{book.author}</p>
+            <div className="col-md-8">
+              {" "}
+              <br />
+              <h1 className="lead text-center">{book.title}</h1>
+              <p className="text-center">{book.author}</p>
               <p className="text-center">{Date(book.published_date)}</p>
-              <hr /> <br />
+              <hr />
+              <div className="m-auto">
+                <Link
+                  to="/"
+                  className="user-actions btn btn-outline-dark float-right"
+                >
+                  Return
+                </Link>
+              </div>{" "}
+              <br />
+              <br />
             </div>
           </div>
-          <div>{BookItem}</div>
-
+          <div>{BookItem}</div> <br />
           <div className="row">
+            <div className="col-md-6">
+              <Link
+                to={`/edit-book/${book._id}`}
+                className="btn btn-outline-info btn-lg btn-block"
+              >
+                Edit Post
+              </Link>
+              <br />
+            </div>
             <div className="col-md-6">
               <button
                 type="button"
@@ -133,16 +133,6 @@ class showBookDetails extends Component {
               >
                 Delete Post
               </button>
-              <br />
-            </div>
-
-            <div className="col-md-6">
-              <Link
-                to={`/edit-book/${book._id}`}
-                className="btn btn-outline-info btn-lg btn-block"
-              >
-                Edit Post
-              </Link>
               <br />
             </div>
           </div>

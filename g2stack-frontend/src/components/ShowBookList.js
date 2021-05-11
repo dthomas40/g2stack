@@ -40,41 +40,41 @@ class ShowBookList extends Component {
 
     return (
       <div className="ShowBookList">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <br />
-              <h2 className="lead text-center">G2 STACK</h2>
-            </div>
-
-            <div className="col-md-11">
-              {/* <img class="logo-size float-left" src="G2.png" /> */}
-              <Link
-                to="/create-book"
-                className="btn btn-outline-dark float-right"
-              >
-                + Add New Stack Post
-              </Link>
-              <br />
-              <br />
-              <hr />
-            </div>
-          </div>
-
-          <Navbar />
+        <div className="">
           <br />
+          <h2 className="lead text-center">G2 STACK</h2>
+        </div>
 
+        <div className="">
+          {/* <img class="logo-size float-left" src="G2.png" /> */}
+          <hr />
+        </div>
+
+        <Navbar />
+        <br />
+        <div className="container">
           {/* <marquee behavior="scroll">
             Search your queries here and see the script cards update...
           </marquee> */}
 
+          <h2 className="lead">Search</h2>
+          <br />
           <Search />
           <br />
 
           <h1 className="lead">Browse</h1>
+          <Link
+            to="/create-book"
+            className="user-actions btn btn-outline-dark float-right"
+          >
+            + Add Script
+          </Link>
+          <br />
+          <br />
+          <br />
           <br />
 
-          <div class="list wrap">{bookList}</div>
+          <div class="list-wrap">{bookList}</div>
         </div>
       </div>
     );

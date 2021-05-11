@@ -33,95 +33,107 @@
 }
 
 :root {
-  --main-bg-color: #5cff9a;
+  --main-bg-color: rgb(124, 255, 174);
+  --main-text-color: #000000;
 }
 
 .CreateBook {
   background-color: var(--main-bg-color);
   min-height: 100vh;
-  color: rgb(0, 0, 0);
+  color: var(--main-text-color);
 }
 
 .ShowBookDetails {
   background-color: var(--main-bg-color);
   min-height: 100vh;
-  color: rgb(0, 0, 0);
+  color: var(--main-text-color);
   overflow: scroll;
 }
 
 .UpdateBookInfo {
   background-color: var(--main-bg-color);
   min-height: 100vh;
-  color: rgb(0, 0, 0);
+  color: var(--main-text-color);
 }
 
 .ShowBookList {
   background-color: var(--main-bg-color);
   min-height: 100vh;
-  color: rgb(0, 0, 0);
+  color: var(--main-text-color);
 }
 
 .About {
   background-color: var(--main-bg-color);
   min-height: 100vh;
-  color: rgb(0, 0, 0);
+  color: var(--main-text-color);
   overflow: hidden;
 }
 
 /* BookList Styles */
-.list {
-  display: flex;
-  margin: 0px;
-  padding-bottom: 15px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
-  grid-gap: 2em;
-  overflow: scroll;
-  -ms-overflow-style: none;
-}
-
-.wrap {
+.list-wrap {
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  justify-content: space-evenly;
+  grid-row-gap: 3em;
+  grid-column-gap: 1em;
 }
 
-.card-container {
-  width: 250px;
-  min-height: 200px;
-  margin: 0;
+.script-card {
+  width: min(100%, 400px);
+  height: 200px;
   overflow: hidden;
-
-  background-color: rgb(157, 255, 206);
+  background-color: #282c34;
   border-radius: 10px;
-  border: 1px solid;
-  padding: 0px;
-  box-shadow: 6px 6px;
+  border: 1px dotted rgb(0, 0, 0);
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.514);
+}
+
+.script-detail-desc {
+  width: min(100%, 400px);
+  overflow: hidden;
+  background-color: #282c34;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px dotted rgb(0, 0, 0);
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.514);
+}
+
+.script-detail-script {
+  width: min(100%, 400px);
+  overflow: hidden;
+  background-color: #282c34;
+  color: white;
+  padding: 15px;
+  white-space: pre-wrap;
+  border-radius: 10px;
+  border: 1px dotted rgb(0, 0, 0);
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.514);
 }
 
 .query-card {
-  margin: 1%;
-  width: 310px;
-  min-height: 90px;
-  /* background-color: rgb(255, 255, 255); */
+  overflow: hidden;
+  width: 100%;
+  min-height: 40px;
 }
 
-.desc {
+.card-contents {
   height: 90px;
   padding: 20px;
 }
 
-.desc h2 {
+.card-contents h2 {
   font-size: 1em;
   font-weight: 400;
 }
 
-.desc h3,
+.card-contents h3,
 p {
+  color: #6c757d;
   font-weight: 300;
 }
 
-.desc h3 {
+.card-contents h3 {
   color: #6c757d;
   font-size: 1em;
   padding: 0;
@@ -145,7 +157,7 @@ p {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(0, 0, 0);
 }
 
 .logo-size {
@@ -155,4 +167,100 @@ p {
 
 .lead {
   font-size: 200%;
+}
+
+.navigation-bar {
+  /* overflow: auto; */
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  background-color: #282c34;
+  /* border-radius: 10px; */
+}
+
+.navigation-button {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.navigation-link {
+  color: #007bff;
+}
+
+.navigation-link:hover {
+  background-color: #000000;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.search-bar input {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  outline: none;
+  background-color: #282c34;
+  padding: 15px;
+  border: none;
+}
+
+.results {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: grid;
+  height: 300px;
+}
+
+.search-section {
+  background-color: #282c34;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.qlist ::-webkit-scrollbar {
+  width: 1px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 2%;
+}
+
+.search-list {
+  list-style-type: none;
+}
+
+.about-content {
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.user-actions {
+  background-color: #282c34;
+  color: #007bff;
+  border-radius: 10px;
+  border: 1px dotted rgb(0, 0, 0);
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.514);
+}
+
+.user-actions:hover {
+  background-color: #000000;
+  color: #007bff;
+}
+
+.detail-table {
+  width: 100%;
+  background-color: #212529;
+  color: white;
+  /* padding: ; */
+  white-space: pre-wrap;
 }
