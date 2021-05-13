@@ -9,6 +9,9 @@ export default class Navbar extends Component {
         <Link to="/" className="navigation-link navigation-button">
           Scripts
         </Link>
+        <Link to="/dashboard" className="navigation-link navigation-button">
+          Dashboard
+        </Link>
         <Link to="/about" className="navigation-link navigation-button">
           About
         </Link>

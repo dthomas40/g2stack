@@ -63,15 +63,6 @@ class ShowBookList extends Component {
           <br />
 
           <h1 className="lead">Browse</h1>
-          <Link
-            to="/create-book"
-            className="user-actions btn btn-outline-dark float-right"
-          >
-            + Add Script
-          </Link>
-          <br />
-          <br />
-          <br />
           <br />
 
           <div class="list-wrap">{bookList}</div>

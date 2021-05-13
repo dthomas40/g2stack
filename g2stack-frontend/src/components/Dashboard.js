@@ -27,9 +27,15 @@ function Dashboard() {
         <div className="w-100" style={{ maxWidth: "400px" }}>
           <Card>
             <Card.Body>
-              <h2 className="text-center mb-4">Profile</h2>
+              <h2 className="text-center mb-4">Dashboard</h2>
               {error && <Alert variant="danger">{error}</Alert>}
               <strong>Email:</strong> {currentUser.email}
+              <br />
+              <br />
+              <Link to="/create-book">+ Add Script</Link>
+              <br />
+              <br />
+              <div></div>
               <Link
                 to="/update-profile"
                 className="btn btn-primary w-100 met-3"
