@@ -79,18 +79,18 @@ class UpdateBookInfo extends Component {
               </Link>
             </div>
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Edit Post</h1>
-              <p className="lead text-center">Update Post Info</p>
+              <h1 className="lead text-center">Edit Post</h1>
+              <p className="text-center">Update Post Info</p>
             </div>
           </div>
 
-          <div className="col-md-8 m-auto">
+          <div className="input-entry col-md-8 m-auto">
             <form noValidate onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label htmlFor="title">Title</label>
                 <input
                   type="text"
-                  placeholder="Title of the Book"
+                  placeholder="Title your script."
                   name="title"
                   className="form-control"
                   value={this.state.title}

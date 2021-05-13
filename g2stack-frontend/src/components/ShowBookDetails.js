@@ -93,9 +93,9 @@ class showBookDetails extends Component {
     return (
       <div className="ShowBookDetails">
         <div className="container">
-          <div className="row">
+          <div className="">
             <br />
-            <div className="col-md-8">
+            <div className="">
               {" "}
               <br />
               <h1 className="lead text-center">{book.title}</h1>
@@ -115,8 +115,9 @@ class showBookDetails extends Component {
             </div>
           </div>
           <div>{BookItem}</div> <br />
-          <div className="row">
-            <div className="col-md-6">
+          <br />
+          <div className="">
+            <div className="">
               <Link
                 to={`/edit-book/${book._id}`}
                 className="btn btn-outline-info btn-lg btn-block"
@@ -125,7 +126,7 @@ class showBookDetails extends Component {
               </Link>
               <br />
             </div>
-            <div className="col-md-6">
+            <div className="">
               <button
                 type="button"
                 className="btn btn-outline-danger btn-lg btn-block"

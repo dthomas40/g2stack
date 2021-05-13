@@ -62,69 +62,71 @@ class CreateBook extends Component {
               </Link>
             </div>
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Add Post</h1>
-              <p className="lead text-center">Create new post</p>
+              <h1 className="lead text-center">Add Post</h1>
+              <p className="text-center">Create new post</p>
 
-              <form noValidate onSubmit={this.onSubmit}>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Title of the Post"
-                    name="title"
-                    className="form-control"
-                    value={this.state.title}
-                    onChange={this.onChange}
-                  />
-                </div>
+              <div className="input-entry">
+                <form noValidate onSubmit={this.onSubmit}>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      placeholder="Title of the Post"
+                      name="title"
+                      className="form-control"
+                      value={this.state.title}
+                      onChange={this.onChange}
+                    />
+                  </div>
 
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Author"
-                    name="author"
-                    className="form-control"
-                    value={this.state.author}
-                    onChange={this.onChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      placeholder="Author"
+                      name="author"
+                      className="form-control"
+                      value={this.state.author}
+                      onChange={this.onChange}
+                    />
+                  </div>
 
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Describe this script"
-                    name="description"
-                    className="form-control"
-                    value={this.state.description}
-                    onChange={this.onChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      placeholder="Describe this script"
+                      name="description"
+                      className="form-control"
+                      value={this.state.description}
+                      onChange={this.onChange}
+                    />
+                  </div>
 
-                <div className="form-group">
-                  <input
-                    type="date"
-                    placeholder="published_date"
-                    name="published_date"
-                    className="form-control"
-                    value={this.state.published_date}
-                    onChange={this.onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Paste in script"
-                    name="publisher"
-                    className="form-control"
-                    value={this.state.publisher}
-                    onChange={this.onChange}
-                  />
-                </div>
+                  <div className="form-group">
+                    <input
+                      type="date"
+                      placeholder="published_date"
+                      name="published_date"
+                      className="form-control"
+                      value={this.state.published_date}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      placeholder="Paste in script"
+                      name="publisher"
+                      className="form-control"
+                      value={this.state.publisher}
+                      onChange={this.onChange}
+                    />
+                  </div>
 
-                <input
-                  type="submit"
-                  className="btn btn-outline-warning btn-block mt-4"
-                />
-              </form>
+                  <input
+                    type="submit"
+                    className="btn btn-outline-info btn-block mt-4"
+                  />
+                </form>
+              </div>
             </div>
           </div>
         </div>

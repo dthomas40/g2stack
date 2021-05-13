@@ -89,7 +89,7 @@
 }
 
 .script-detail-desc {
-  width: min(100%, 400px);
+  width: 100%;
   overflow: hidden;
   background-color: #282c34;
   color: white;
@@ -100,7 +100,7 @@
 }
 
 .script-detail-script {
-  width: min(100%, 400px);
+  width: 100%;
   overflow: hidden;
   background-color: #282c34;
   color: white;
@@ -263,4 +263,11 @@ p {
   color: white;
   /* padding: ; */
   white-space: pre-wrap;
+}
+
+.input-entry {
+  background-color: #282c34;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
 }
