@@ -23,6 +23,7 @@ app.use("/api/books", books);
 
 const port = process.env.PORT || 8082;
 
-app.set("port", port);
-
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => {
+  const port = server.address().port;
+  console.log(`Server running on port ${port}`);
+});
