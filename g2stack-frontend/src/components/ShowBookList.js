@@ -51,6 +51,7 @@ class ShowBookList extends Component {
         <br />
 
         <div class="list-wrap">{bookList}</div>
+        <br />
       </div>
     );
   }
