@@ -24,7 +24,7 @@ function Dashboard() {
         className="d-flex justify-content-center"
         style={{ minHeight: "100vh" }}
       >
-        <div className="w-100" style={{ maxWidth: "400px" }}>
+        <div className="w-100" style={{ maxWidth: "500px" }}>
           <Card>
             <Card.Body>
               <h2 className="text-center lead">Dashboard</h2>

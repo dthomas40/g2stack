@@ -77,8 +77,8 @@
   overflow: hidden;
   background-color: #ffffff;
   border-radius: 10px;
-  border: 1px dotted rgb(0, 0, 0);
-  box-shadow: 6px 6px rgba(0, 0, 0, 0.514);
+  /* border: 1px dotted rgb(0, 0, 0); */
+  /* box-shadow: 6px 6px rgba(0, 0, 0, 0.514); */
 }
 
 .script-detail-desc {
@@ -193,7 +193,7 @@ p {
   width: 100%;
   color: rgb(255, 255, 255);
   outline: none;
-  background-color: #282c34;
+  background-color: #ffffff;
   padding: 15px;
   border: none;
 }
@@ -206,7 +206,7 @@ p {
 }
 
 .search-section {
-  background-color: #282c34;
+  background-color: #ffffff;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -230,11 +230,12 @@ p {
 }
 
 .about-content {
-  background-color: #282c34;
-  color: #ffffff;
+  background-color: #ffffff;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
+  color: #6c757d;
+  font-weight: 300;
 }
 
 .user-actions {
