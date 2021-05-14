@@ -56,17 +56,10 @@
   color: var(--main-text-color);
 }
 
-.ShowBookList {
+.Base {
   background-color: var(--main-bg-color);
   min-height: 100vh;
   color: var(--main-text-color);
-}
-
-.About {
-  background-color: var(--main-bg-color);
-  min-height: 100vh;
-  color: var(--main-text-color);
-  overflow: hidden;
 }
 
 /* BookList Styles */
@@ -270,4 +263,9 @@ p {
   padding: 20px;
   border-radius: 10px;
   color: #ffffff;
+}
+
+.align-right {
+  display: block;
+  text-align: center;
 }

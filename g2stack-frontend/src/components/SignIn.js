@@ -18,6 +18,7 @@ function SignIn() {
       setError("");
       setLoading(true);
       await signin(emailRef.current.value, passwordRef.current.value);
+      history.goBack();
     } catch {
       setError("Failed to sign in");
     }
@@ -26,13 +27,14 @@ function SignIn() {
   return (
     <div>
       <Container
-        className="d-flex align-items-center justify-content-center"
+        className="d-flex justify-content-center"
         style={{ minHeight: "100vh" }}
       >
         <div className="w-100" style={{ maxWidth: "400px" }}>
           <Card>
             <Card.Body>
-              <h2>Sign In</h2>
+              <h2 className="text-center lead">Sign In</h2>
+              <br />
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                 <Form.Group id="email">

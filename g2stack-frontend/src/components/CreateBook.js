@@ -52,22 +52,14 @@ class CreateBook extends Component {
       <div className="CreateBook">
         <div className="container">
           <div className="row">
+            <div className="col-md-8 m-auto"></div>
             <div className="col-md-8 m-auto">
-              <br />
-              <Link
-                to="/"
-                className="user-actions btn btn-outline-dark float-left"
-              >
-                Return
-              </Link>
-            </div>
-            <div className="col-md-8 m-auto">
-              <h1 className="lead text-center">Add Post</h1>
-              <p className="text-center">Create new post</p>
-
               <div className="input-entry">
+                <h1 className="lead text-center">Add Post</h1>
+                <p className="text-center">Create new post</p>
                 <form noValidate onSubmit={this.onSubmit}>
                   <div className="form-group">
+                    <label htmlFor="title">Title</label>
                     <input
                       type="text"
                       placeholder="Title of the Post"
@@ -79,6 +71,8 @@ class CreateBook extends Component {
                   </div>
 
                   <div className="form-group">
+                    <label htmlFor="author">Author</label>
+
                     <input
                       type="text"
                       placeholder="Author"
@@ -90,6 +84,8 @@ class CreateBook extends Component {
                   </div>
 
                   <div className="form-group">
+                    <label htmlFor="description">Description</label>
+
                     <input
                       type="text"
                       placeholder="Describe this script"
@@ -101,6 +97,8 @@ class CreateBook extends Component {
                   </div>
 
                   <div className="form-group">
+                    <label htmlFor="published_date">Published Date</label>
+
                     <input
                       type="date"
                       placeholder="published_date"
@@ -111,9 +109,12 @@ class CreateBook extends Component {
                     />
                   </div>
                   <div className="form-group">
-                    <input
+                    <label htmlFor="publisher">Script</label>
+
+                    <textarea
                       type="text"
                       placeholder="Paste in script"
+                      rows="5"
                       name="publisher"
                       className="form-control"
                       value={this.state.publisher}

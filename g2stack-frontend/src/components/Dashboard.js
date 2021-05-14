@@ -21,13 +21,14 @@ function Dashboard() {
   return (
     <div>
       <Container
-        className="d-flex align-items-center justify-content-center"
+        className="d-flex justify-content-center"
         style={{ minHeight: "100vh" }}
       >
         <div className="w-100" style={{ maxWidth: "400px" }}>
           <Card>
             <Card.Body>
-              <h2 className="text-center mb-4">Dashboard</h2>
+              <h2 className="text-center lead">Dashboard</h2>
+              <br />
               {error && <Alert variant="danger">{error}</Alert>}
               <strong>Email:</strong> {currentUser.email}
               <br />

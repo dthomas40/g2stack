@@ -93,27 +93,10 @@ class showBookDetails extends Component {
     return (
       <div className="ShowBookDetails">
         <div className="container">
-          <div className="">
-            <br />
-            <div className="">
-              {" "}
-              <br />
-              <h1 className="lead text-center">{book.title}</h1>
-              <p className="text-center">{book.author}</p>
-              <p className="text-center">{Date(book.published_date)}</p>
-              <hr />
-              <div className="m-auto">
-                <Link
-                  to="/"
-                  className="user-actions btn btn-outline-dark float-right"
-                >
-                  Return
-                </Link>
-              </div>{" "}
-              <br />
-              <br />
-            </div>
-          </div>
+          <h1 className="lead text-center">{book.title}</h1>
+          <p className="text-center">{book.author}</p>
+          <p className="text-center">{Date(book.published_date)}</p>
+          <hr />
           <div>{BookItem}</div> <br />
           <br />
           <div className="">

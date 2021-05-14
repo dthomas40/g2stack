@@ -68,23 +68,9 @@ class UpdateBookInfo extends Component {
     return (
       <div className="UpdateBookInfo">
         <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <br />
-              <Link
-                to="/"
-                className="user-actions btn btn-outline-dark float-left"
-              >
-                Return
-              </Link>
-            </div>
-            <div className="col-md-8 m-auto">
-              <h1 className="lead text-center">Edit Post</h1>
-              <p className="text-center">Update Post Info</p>
-            </div>
-          </div>
-
           <div className="input-entry col-md-8 m-auto">
+            <h1 className="lead text-center">Edit Post</h1>
+            <p className="text-center">Update Post Info</p>
             <form noValidate onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label htmlFor="title">Title</label>
@@ -135,9 +121,10 @@ class UpdateBookInfo extends Component {
             </div> */}
               <div className="form-group">
                 <label htmlFor="publisher">Script</label>
-                <input
+                <textarea
                   type="text"
                   placeholder="Publisher of this Book"
+                  rows="5"
                   name="publisher"
                   className="form-control"
                   value={this.state.publisher}
