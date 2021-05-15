@@ -18,7 +18,7 @@ function SignIn() {
       setError("");
       setLoading(true);
       await signin(emailRef.current.value, passwordRef.current.value);
-      history.goBack();
+      history.push("/");
     } catch {
       setError("Failed to sign in");
     }

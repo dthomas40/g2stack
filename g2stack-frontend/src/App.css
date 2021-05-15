@@ -191,7 +191,7 @@ p {
 
 .search-bar input {
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: #007bff;
   outline: none;
   background-color: #ffffff;
   padding: 15px;
@@ -269,4 +269,8 @@ p {
 .align-right {
   display: block;
   text-align: center;
+}
+
+.auth-containers {
+  border-radius: 10px;
 }

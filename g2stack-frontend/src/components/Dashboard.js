@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Button, Alert, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import "../App.css";
 
 function Dashboard() {
   const [error, setError] = useState("");
@@ -25,7 +26,7 @@ function Dashboard() {
         style={{ minHeight: "100vh" }}
       >
         <div className="w-100" style={{ maxWidth: "500px" }}>
-          <Card>
+          <Card className="auth-containers">
             <Card.Body>
               <h2 className="text-center lead">Dashboard</h2>
               <br />
@@ -43,13 +44,17 @@ function Dashboard() {
               >
                 Update Profile
               </Link>
+              <br />
+              <br />
+              <Button
+                className="btn btn-danger w-100 met-3"
+                onClick={handleSignOut}
+              >
+                Sign Out
+              </Button>
             </Card.Body>
           </Card>
-          <div className="w-100 text-center mt-2">
-            <Button variant="link" onClick={handleSignOut}>
-              Sign Out
-            </Button>
-          </div>
+          <div className="w-100 text-center mt-2"></div>
         </div>
       </Container>
     </div>
