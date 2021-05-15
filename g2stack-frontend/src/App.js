@@ -13,6 +13,8 @@ import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import ForgotPassword from "./components/ForgotPassword";
+import UpdateProfile from "./components/UpdateProfile";
 import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
           <Route exact path="/" component={ShowBookList} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/sign-in" component={SignIn} />
+          <Route path="/forgot-password" component={ForgotPassword} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/update-profile" component={UpdateProfile} />
           <PrivateRoute path="/create-book" component={CreateBook} />
           <PrivateRoute path="/edit-book/:id" component={UpdateBookInfo} />
           <Route path="/show-book/:id" component={ShowBookDetails} />
