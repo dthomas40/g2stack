@@ -5,18 +5,28 @@ const BookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  UID: {
+    type: String,
+    required: true,
+  },
   author: {
     type: String,
     required: true,
   },
   description: {
     type: String,
+    required: true,
+  },
+  reference: {
+    type: String,
   },
   published_date: {
     type: Date,
+    default: Date.now,
   },
-  publisher: {
+  script: {
     type: String,
+    required: true,
   },
   updated_date: {
     type: Date,

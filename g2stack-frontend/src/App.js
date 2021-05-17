@@ -11,20 +11,21 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
-import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
 import { AuthProvider } from "./contexts/AuthContext";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
         <div className="Base">
-          <Header />
           <Navbar />
           <br />
+
+          <Header />
           <Route exact path="/" component={ShowBookList} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/sign-in" component={SignIn} />

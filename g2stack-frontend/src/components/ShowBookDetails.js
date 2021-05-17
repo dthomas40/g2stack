@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
+import { auth } from "../firebase";
 
 class showBookDetails extends Component {
   constructor(props) {
@@ -76,6 +77,14 @@ class showBookDetails extends Component {
 
     let BookItem = (
       <div>
+        {book.reference && (
+          <a href={book.reference} class="lead l-font">
+            Visit Script Source.
+          </a>
+        )}
+        <br />
+        <br />
+
         <h1 class="lead">Description</h1>
         <br />
         <div class="script-detail-desc">{book.description}</div>
@@ -85,7 +94,7 @@ class showBookDetails extends Component {
         <br />
         <div class="script-detail-script">
           <p class="click-me">Click here to copy script.</p>
-          <div id="script-text">{book.publisher}</div>
+          <div id="script-text">{book.script}</div>
         </div>
       </div>
     );
@@ -95,31 +104,40 @@ class showBookDetails extends Component {
         <div className="container">
           <h1 className="lead text-center">{book.title}</h1>
           <p className="text-center">{book.author}</p>
-          <p className="text-center">{Date(book.published_date)}</p>
+          <p className="text-center">
+            Last Updated on {Date(book.published_date)}
+          </p>
           <hr />
           <div>{BookItem}</div> <br />
           <br />
-          <div className="">
-            <div className="">
-              <Link
-                to={`/edit-book/${book._id}`}
-                className="btn btn-outline-info btn-lg btn-block"
-              >
-                Edit Post
-              </Link>
-              <br />
-            </div>
-            <div className="">
-              <button
-                type="button"
-                className="btn btn-outline-danger btn-lg btn-block"
-                onClick={this.onDeleteClick.bind(this, book._id)}
-              >
-                Delete Post
-              </button>
-              <br />
-            </div>
-          </div>
+          {auth.currentUser ? (
+            auth.currentUser.uid == book.UID && (
+              <div className="">
+                <div className="">
+                  <Link
+                    to={`/edit-book/${book._id}`}
+                    className="btn btn-outline-info btn-lg btn-block"
+                  >
+                    Edit Post
+                  </Link>
+                  <br />
+                </div>
+
+                <div className="">
+                  <button
+                    type="button"
+                    className="btn btn-outline-danger btn-lg btn-block"
+                    onClick={this.onDeleteClick.bind(this, book._id)}
+                  >
+                    Delete Post
+                  </button>
+                  <br />
+                </div>
+              </div>
+            )
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     );

@@ -10,25 +10,23 @@ class UpdateBookInfo extends Component {
       title: "",
       author: "",
       description: "",
-      published_date: "",
-      publisher: "",
+      reference: "",
+      script: "",
     };
   }
 
   componentDidMount() {
-    // console.log("Print id: " + this.props.match.params.id);
     axios
       .get(
         "https://g2stack.herokuapp.com/api/books/" + this.props.match.params.id
       )
       .then((res) => {
-        // this.setState({...this.state, book: res.data})
         this.setState({
           title: res.data.title,
           author: res.data.author,
           description: res.data.description,
-          published_date: res.data.published_date,
-          publisher: res.data.publisher,
+          reference: res.data.reference,
+          script: res.data.script,
         });
       })
       .catch((err) => {
@@ -47,8 +45,8 @@ class UpdateBookInfo extends Component {
       title: this.state.title,
       author: this.state.author,
       description: this.state.description,
-      published_date: this.state.published_date,
-      publisher: this.state.publisher,
+      reference: this.state.reference,
+      script: this.state.script,
     };
 
     axios
@@ -97,6 +95,18 @@ class UpdateBookInfo extends Component {
               </div>
 
               <div className="form-group">
+                <label htmlFor="reference">Reference</label>
+                <input
+                  type="text"
+                  placeholder="Reference URL"
+                  name="reference"
+                  className="form-control"
+                  value={this.state.reference}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
                 <label htmlFor="description">Description</label>
                 <input
                   type="text"
@@ -108,26 +118,15 @@ class UpdateBookInfo extends Component {
                 />
               </div>
 
-              {/* <div className='form-group'>
-            <label htmlFor="published_date">Published Date</label>
-              <input
-                type='date'
-                placeholder='published_date'
-                name='published_date'
-                className='form-control'
-                value={this.state.published_date}
-                onChange={this.onChange}
-              />
-            </div> */}
               <div className="form-group">
-                <label htmlFor="publisher">Script</label>
+                <label htmlFor="script">Script</label>
                 <textarea
                   type="text"
-                  placeholder="Publisher of this Book"
+                  placeholder="Script"
                   rows="5"
-                  name="publisher"
+                  name="script"
                   className="form-control"
-                  value={this.state.publisher}
+                  value={this.state.script}
                   onChange={this.onChange}
                 />
               </div>

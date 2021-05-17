@@ -27,6 +27,20 @@ export function AuthProvider({ children }) {
     return auth.sendPasswordResetEmail(email);
   }
 
+  function updateDisplayName(displayName) {
+    return currentUser
+      .updateProfile({
+        displayName: displayName,
+        // photoURL: "https://example.com/jane-q-user/profile.jpg",
+      })
+      .then(function () {
+        // Update successful.
+      })
+      .catch(function (error) {
+        // An error happened.
+      });
+  }
+
   function updateEmail(email) {
     return currentUser.updateEmail(email);
   }
@@ -50,6 +64,7 @@ export function AuthProvider({ children }) {
     signup,
     signout,
     resetPassword,
+    updateDisplayName,
     updateEmail,
     updatePassword,
   };

@@ -5,7 +5,7 @@ import "../App.css";
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navigation-bar">
+      <nav className="navigation-bar lead nav-text" id="navbar">
         <Link to="/" className="navigation-link navigation-button">
           Scripts
         </Link>

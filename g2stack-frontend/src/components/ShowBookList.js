@@ -38,10 +38,6 @@ class ShowBookList extends Component {
 
     return (
       <div className="container">
-        {/* <marquee behavior="scroll">
-            Search your queries here and see the script cards update...
-          </marquee> */}
-
         <h2 className="lead">Search</h2>
         <br />
         <Search />

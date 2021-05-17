@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
+import { auth } from "../firebase";
 
 class CreateBook extends Component {
   constructor() {
     super();
     this.state = {
       title: "",
-      author: "",
       description: "",
-      published_date: "",
-      publisher: "",
+      reference: "",
+      script: "",
     };
   }
 
@@ -24,10 +23,11 @@ class CreateBook extends Component {
 
     const data = {
       title: this.state.title,
-      author: this.state.author,
+      UID: auth.currentUser.uid,
+      author: auth.currentUser.displayName,
       description: this.state.description,
-      published_date: this.state.published_date,
-      publisher: this.state.publisher,
+      reference: this.state.reference,
+      script: this.state.script,
     };
 
     axios
@@ -37,8 +37,8 @@ class CreateBook extends Component {
           title: "",
           author: "",
           description: "",
-          published_date: "",
-          publisher: "",
+          reference: "",
+          script: "",
         });
         this.props.history.push("/");
       })
@@ -71,14 +71,14 @@ class CreateBook extends Component {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="author">Author</label>
+                    <label htmlFor="reference">Reference</label>
 
                     <input
                       type="text"
-                      placeholder="Author"
-                      name="author"
+                      placeholder="Source of script if not original."
+                      name="reference"
                       className="form-control"
-                      value={this.state.author}
+                      value={this.state.reference}
                       onChange={this.onChange}
                     />
                   </div>
@@ -86,9 +86,10 @@ class CreateBook extends Component {
                   <div className="form-group">
                     <label htmlFor="description">Description</label>
 
-                    <input
+                    <textarea
                       type="text"
                       placeholder="Describe this script"
+                      rows="5"
                       name="description"
                       className="form-control"
                       value={this.state.description}
@@ -97,27 +98,15 @@ class CreateBook extends Component {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="published_date">Published Date</label>
-
-                    <input
-                      type="date"
-                      placeholder="published_date"
-                      name="published_date"
-                      className="form-control"
-                      value={this.state.published_date}
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="publisher">Script</label>
+                    <label htmlFor="script">Script</label>
 
                     <textarea
                       type="text"
                       placeholder="Paste in script"
                       rows="5"
-                      name="publisher"
+                      name="script"
                       className="form-control"
-                      value={this.state.publisher}
+                      value={this.state.script}
                       onChange={this.onChange}
                     />
                   </div>

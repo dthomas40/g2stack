@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Container, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import { signInWithGoogle } from "../firebase";
 
 function SignIn() {
   const emailRef = useRef();
@@ -24,8 +25,24 @@ function SignIn() {
     }
     setLoading(false);
   }
+
+  async function googleSubmitHandler(e) {
+    e.preventDefault();
+
+    try {
+      setError("");
+      setLoading(true);
+      await signInWithGoogle();
+      history.push("/");
+    } catch {
+      setError("Failed to sign in with Google");
+    }
+    setLoading(false);
+  }
+
   return (
     <div>
+      <br />
       <Container
         className="d-flex justify-content-center"
         style={{ minHeight: "100vh" }}
@@ -48,6 +65,16 @@ function SignIn() {
                 <Button disabled={loading} type="submit">
                   Sign In
                 </Button>
+                <br />
+                <br />
+                <div className="login-buttons">
+                  <Button
+                    className="login-provider-button"
+                    onClick={googleSubmitHandler}
+                  >
+                    <span>Continue with Google</span>
+                  </Button>
+                </div>
               </Form>
               <div className="w-100 text-center mt-3">
                 <Link to="/forgot-password">Forgot Password?</Link>

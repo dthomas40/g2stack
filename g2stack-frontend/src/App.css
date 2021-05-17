@@ -166,10 +166,12 @@ p {
   /* overflow: auto; */
   width: 100%;
   margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   background-color: #282c34;
+  /* background-color: #000000; */
   /* border-radius: 10px; */
 }
 
@@ -273,4 +275,29 @@ p {
 
 .auth-containers {
   border-radius: 10px;
+}
+
+.auth-corner {
+  font-size: small;
+}
+
+.s-font {
+  font-size: small;
+}
+
+.m-font {
+  font-size: medium;
+}
+
+.l-font {
+  font-size: large;
+}
+
+.nav-text {
+  font-size: large;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
 }
