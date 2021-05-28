@@ -105,13 +105,13 @@
 }
 
 .query-card {
-  overflow: hidden;
+  overflow: scroll;
   width: 100%;
   min-height: 40px;
 }
 
 .card-contents {
-  height: 90px;
+  /* height: 90px; */
   padding: 20px;
 }
 
@@ -300,4 +300,13 @@ p {
 #navbar {
   position: sticky;
   top: 0;
+}
+
+.comment {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.delete-comment-button {
+  padding: 15px;
 }

@@ -16,6 +16,8 @@ import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
 import { AuthProvider } from "./contexts/AuthContext";
 import Navbar from "./components/Navbar";
+import AdminRoute from "./components/AdminRoute";
+import Admin from "./components/Admin";
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
           <PrivateRoute path="/update-profile" component={UpdateProfile} />
           <PrivateRoute path="/create-book" component={CreateBook} />
           <PrivateRoute path="/edit-book/:id" component={UpdateBookInfo} />
+          <AdminRoute path="/admin" component={Admin}></AdminRoute>
           <Route path="/show-book/:id" component={ShowBookDetails} />
           <Route path="/about" component={About} />
         </div>

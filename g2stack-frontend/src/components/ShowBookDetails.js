@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 import { auth } from "../firebase";
+import CreateComment from "./CreateComment";
 
 class showBookDetails extends Component {
   constructor(props) {
@@ -108,36 +109,41 @@ class showBookDetails extends Component {
             Last Updated on {Date(book.published_date)}
           </p>
           <hr />
-          <div>{BookItem}</div> <br />
-          <br />
           {auth.currentUser ? (
-            auth.currentUser.uid == book.UID && (
+            auth.currentUser.uid === book.UID && (
               <div className="">
                 <div className="">
                   <Link
                     to={`/edit-book/${book._id}`}
-                    className="btn btn-outline-info btn-lg btn-block"
+                    className="btn btn-primary w-100 met-3"
                   >
                     Edit Post
                   </Link>
+                  <br />
                   <br />
                 </div>
 
                 <div className="">
                   <button
                     type="button"
-                    className="btn btn-outline-danger btn-lg btn-block"
+                    className="btn btn-danger w-100 met-3"
                     onClick={this.onDeleteClick.bind(this, book._id)}
                   >
                     Delete Post
                   </button>
                   <br />
+                  <br />
                 </div>
               </div>
             )
           ) : (
-            <div></div>
+            <div>
+              <br />
+            </div>
           )}
+          <div>{BookItem}</div> <br />
+          <br />
+          <CreateComment book={book} />
         </div>
       </div>
     );
